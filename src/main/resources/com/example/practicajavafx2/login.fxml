@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="246.0" prefWidth="263.0" spacing="20.0" style="-fx-background-color: #B8E0D8;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.practicajavafx2.LoginController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <VBox prefHeight="213.0" prefWidth="223.0">
+      <children>
+         <Label fx:id="lblTitulo" alignment="CENTER" prefHeight="31.0" prefWidth="197.0" text="ACCESO" textAlignment="CENTER" textFill="#ff000d" textOverrun="CLIP">
+            <font>
+               <Font name="System Bold Italic" size="21.0" />
+            </font>
+         </Label>
+         <Label fx:id="lblUsuario" text="Usuario">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Label>
+         <TextField fx:id="txtUsuario" />
+         <Label fx:id="lblContrasena" text="Contraseña">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Label>
+         <PasswordField fx:id="txtContrasena" />
+         <Label text="Rol del Usuario" textFill="#030303">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font></Label>
+         <ComboBox fx:id="cbxRol" prefHeight="25.0" prefWidth="185.0" promptText="Seleccione un rol" />
+         <Label fx:id="lblValidacion" prefHeight="103.0" prefWidth="183.0" textFill="#ff8f8f">
+            <padding>
+               <Insets bottom="10.0" top="10.0" />
+            </padding>
+         </Label>
+          <Button fx:id="btnValidar" alignment="CENTER" contentDisplay="CENTER" onAction="#validarCredenciales" prefHeight="25.0" prefWidth="74.0" style="-fx-background-color: #E5FC08;" text="Ingresar" textAlignment="CENTER" textFill="#3c3c3c">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+            <VBox.margin>
+               <Insets bottom="15.0" />
+            </VBox.margin>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+         </Button>
+         <Button fx:id="btnSalir" mnemonicParsing="false" onAction="#salirDelPrograma" style="-fx-background-color: Red;" text="Salir" textFill="WHITE" />
+      </children>
+      <padding>
+         <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
+      </padding>
+   </VBox>
+</VBox>

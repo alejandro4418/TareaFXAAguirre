@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="545.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.practicajavafx2.AdministradorController">
+   <children>
+      <Label fx:id="lblTituloAdmin" layoutX="184.0" layoutY="24.0" text="Menu Administrador">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblProducto" layoutX="46.0" layoutY="95.0" text="Nombre Producto:" />
+      <TextField fx:id="txtProducto" layoutX="180.0" layoutY="91.0" prefHeight="25.0" prefWidth="185.0" />
+      <Label fx:id="lblCategoria" layoutX="46.0" layoutY="125.0" text="Categoría:" />
+      <Label fx:id="lblPrecio" layoutX="44.0" layoutY="192.0" text="Precio:" />
+      <TextField fx:id="txtPrecio" layoutX="180.0" layoutY="188.0" prefHeight="25.0" prefWidth="185.0" />
+      <Label fx:id="lblStock" layoutX="46.0" layoutY="156.0" text="Stock:" />
+      <TextField fx:id="txtStock" layoutX="180.0" layoutY="152.0" prefHeight="25.0" prefWidth="185.0" />
+      <Button fx:id="btnRegistrarProducto" layoutX="199.0" layoutY="304.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="121.0" text="Registrar Producto" />
+      <Label fx:id="lblMensajeProducto" layoutX="259.0" layoutY="267.0" />
+      <TextField fx:id="txtCategoria" layoutX="180.0" layoutY="121.0" prefHeight="25.0" prefWidth="185.0" />
+   </children>
+</AnchorPane>
