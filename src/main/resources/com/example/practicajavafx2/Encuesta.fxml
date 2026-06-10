@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="710.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.practicajavafx2.EncuestaController">
+   <children>
+      <Label layoutX="273.0" layoutY="33.0" prefHeight="27.0" prefWidth="224.0" text="Encuesta Dragon Ball" textFill="#ee0000">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font></Label>
+      <Label layoutX="48.0" layoutY="84.0" text="¿Cuál es el nombre del hermano de Goku?: " />
+      <ComboBox fx:id="cbxPRegunta1" layoutX="438.0" layoutY="80.0" prefHeight="25.0" prefWidth="193.0" promptText="-- Selecciona una opcion --" />
+      <Label layoutX="48.0" layoutY="125.0" text="¿Qué técnica de teletransportación enseña el Rey Kai a Goku?: " />
+      <ComboBox fx:id="cbxPRegunta2" layoutX="438.0" layoutY="121.0" prefHeight="25.0" prefWidth="193.0" promptText="-- Selecciona una opcion --" />
+      <Label layoutX="48.0" layoutY="169.0" text="¿Cuántas Esferas del Dragón se necesitan para invocar a Shenlong?: " />
+      <ComboBox fx:id="cbxPRegunta3" layoutX="438.0" layoutY="165.0" prefHeight="25.0" prefWidth="193.0" promptText="-- Selecciona una opcion --" />
+      <Label layoutX="48.0" layoutY="215.0" text="¿Cuál es la primera transformación en Super Saiyajin que alcanza Goku?: " />
+      <ComboBox fx:id="cbxPRegunta4" layoutX="438.0" layoutY="211.0" prefHeight="25.0" prefWidth="193.0" promptText="-- Selecciona una opcion --" />
+      <Label fx:id="lblResultado" layoutX="34.0" layoutY="263.0" prefHeight="17.0" prefWidth="648.0" textAlignment="CENTER" />
+      <Button fx:id="btnRegistrarRespuestas" layoutX="287.0" layoutY="304.0" mnemonicParsing="false" onAction="#RegistrarRespuestas" prefHeight="25.0" prefWidth="146.0" style="-fx-background-color: #615754;" text="Registrar Respuestas" textFill="WHITE" />
+   </children>
+</AnchorPane>
