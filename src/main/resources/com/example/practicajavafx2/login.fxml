@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" prefHeight="246.0" prefWidth="263.0" spacing="20.0" style="-fx-background-color: #B8E0D8;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.practicajavafx2.LoginController">
+<VBox alignment="CENTER" prefHeight="246.0" prefWidth="263.0" spacing="20.0" styleClass="vbox-principal" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.practicajavafx2.LoginController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
@@ -33,12 +34,12 @@
                <Font name="System Bold" size="12.0" />
             </font></Label>
          <ComboBox fx:id="cbxRol" prefHeight="25.0" prefWidth="185.0" promptText="Seleccione un rol" />
-         <Label fx:id="lblValidacion" prefHeight="103.0" prefWidth="183.0" textFill="#ff8f8f">
+         <Label fx:id="lblValidacion" prefHeight="103.0" prefWidth="183.0" textFill="#1b1a1a">
             <padding>
                <Insets bottom="10.0" top="10.0" />
             </padding>
          </Label>
-          <Button fx:id="btnValidar" alignment="CENTER" contentDisplay="CENTER" onAction="#validarCredenciales" prefHeight="25.0" prefWidth="74.0" style="-fx-background-color: #E5FC08;" text="Ingresar" textAlignment="CENTER" textFill="#3c3c3c">
+          <Button fx:id="btnValidar" alignment="CENTER" contentDisplay="CENTER" onAction="#validarCredenciales" prefHeight="40.0" prefWidth="97.0" styleClass="btn-primary" text="Ingresar" textAlignment="CENTER" textFill="#3c3c3c">
             <font>
                <Font name="System Bold" size="12.0" />
             </font>
@@ -48,11 +49,23 @@
             <opaqueInsets>
                <Insets />
             </opaqueInsets>
+            <stylesheets>
+               <URL value="@../../../css/estilo.css" />
+               <URL value="@../../../css/estilo.css" />
+            </stylesheets>
          </Button>
-         <Button fx:id="btnSalir" mnemonicParsing="false" onAction="#salirDelPrograma" style="-fx-background-color: Red;" text="Salir" textFill="WHITE" />
+         <Button fx:id="btnSalir" mnemonicParsing="false" onAction="#salirDelPrograma" styleClass="btn-danger" text="Salir" textFill="WHITE">
+            <stylesheets>
+               <URL value="@../../../css/estilo.css" />
+               <URL value="@../../../css/estilo.css" />
+            </stylesheets></Button>
       </children>
       <padding>
          <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
       </padding>
    </VBox>
+   <stylesheets>
+      <URL value="@../../../css/estilo.css" />
+      <URL value="@../../../css/estilo.css" />
+   </stylesheets>
 </VBox>

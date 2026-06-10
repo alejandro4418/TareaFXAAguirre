@@ -45,6 +45,8 @@ public class EncuestaController implements Initializable {
     private final int TOTAL_PREGUNTAS = 4;
     private final int PUNTAJE_MAXIMO = TOTAL_PREGUNTAS * VALOR_POR_RESPUESTA; // 20 puntos
 
+    private boolean encuestaRespondida = false;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         // Llenar las opciones para cada pregunta
@@ -92,6 +94,9 @@ public class EncuestaController implements Initializable {
 
     @FXML
     private void RegistrarRespuestas() {
+        if (encuestaRespondida) {
+            return;
+        }
         // Reiniciar contadores
         puntajeTotal = 0;
         respuestasCorrectas = 0;
@@ -112,6 +117,20 @@ public class EncuestaController implements Initializable {
         // Calcular puntaje total (ya se va sumando en cada evaluación)
         // Mostrar resultados
         mostrarResultados();
+        //Bloquea la encuesta
+        bloquearEncuesta();
+    }
+
+    private void bloquearEncuesta() {
+        encuestaRespondida = true;
+
+        cbxPRegunta1.setDisable(true);
+        cbxPRegunta2.setDisable(true);
+        cbxPRegunta3.setDisable(true);
+        cbxPRegunta4.setDisable(true);
+
+        btnRegistrarRespuestas.setDisable(true);
+        btnRegistrarRespuestas.setText("Encuesta Completada");
     }
 
     private void evaluarPregunta1() {

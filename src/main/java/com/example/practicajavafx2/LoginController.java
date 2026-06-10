@@ -9,6 +9,8 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 
 import java.io.IOException;
 import java.net.URL;
@@ -90,8 +92,8 @@ public class LoginController implements Initializable {
             }
 
         } else {
-
-            lblValidacion.setText("ACCESO INCORRECTO!");
+            lblValidacion.setText("ACCESO INVALIDO!");
+            mostrarAlertaError();
         }
     }
 
@@ -110,7 +112,14 @@ public class LoginController implements Initializable {
         } catch (Exception e){
             e.printStackTrace();
         }
+    }
 
+    private void mostrarAlertaError() {
+        Alert alerta = new Alert(AlertType.ERROR);
+        alerta.setTitle("Error de Acceso");
+        alerta.setHeaderText("ACCESO INVALIDO");
+        alerta.setContentText("Usuario o Contraseña inválidos\nIntente nuevamente");
+        alerta.showAndWait();
     }
 
     @FXML
